@@ -2,6 +2,7 @@
 	'use strict';
 	var stems = document.querySelectorAll( '.stem' );
 	var flowers = document.querySelectorAll( '.flower' );
+	var sun = document.querySelector( '.sun' );
 	var colours = [
 		'deeppink',
 		'black',
@@ -45,6 +46,14 @@
 
 		return currentColour;
 	}
+
+	sun.addEventListener( 'click', function () {
+		sun.classList.add( 'spin' );
+	});
+
+	sun.addEventListener( 'transitionend', function () {
+		sun.classList.remove( 'spin' );
+	});
 
 	window.addEventListener( 'keyup', function ( event ) {
 		var colour;

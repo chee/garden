@@ -21,19 +21,14 @@ body {
 	background: yellow;
 	border: 50px dotted #ff6633;
 	box-sizing: content-box;
-	box-shadow: 0 0 1000px white;
+	box-shadow: 0 0 1000px white, inset 0 0 50px rgba( 250, 100, 0, 0.3 );
 }
 
-.sun {
-	transition: height .1s ease-in-out,
-	            width .1s ease-in-out,
-	            all 100s ease-in-out;
-}
-
-.sun:active {
-	height: 105px;
-	width: 105px;
-	transform: rotate( 36000deg );
+.sun.spin {
+	transform: rotate( 360deg );
+	transition: height .5s ease-in-out,
+	            width .5s ease-in-out,
+	            all 1s ease-in-out;
 }
 
 .grass {
@@ -70,19 +65,19 @@ body {
 .flower {
 	border-color: white;
 	border-width: 15px;
-	box-shadow: 0 0 1px black;
+	box-shadow: 0 0 1px black, inset 0 0 10px rgba( 0, 0, 0, 0.3 );
 	top: -30px;
 	left: -25px;
 	height: 30px;
 	width: 30px;
 	background-color: deeppink;
-	transition: height 2s 3.4s ease-in-out,
-	            width 2s 3.4s ease-in-out,
-	            left 2s 3.4s ease-in-out,
-	            border-width 2s 3.4s ease-in-out,
-	            top 2s 3.4s ease-in-out,
+	transition: height 3.4s ease-in-out,
+	            width 3.4s ease-in-out,
+	            left 3.4s ease-in-out,
+	            border-width 3.4s ease-in-out,
+	            top 3.4s ease-in-out,
 	            background-color .5s ease-in-out,
-	            -webkit-transform 2s 3.4s ease-in-out;
+	            -webkit-transform 3.4s ease-in-out;
 }
 
 .alive .flower,
@@ -93,6 +88,13 @@ body {
 	left: -55px;
 	top: -60px;
 	border-width: 30px;
+	transition: height 2s 3.4s ease-in-out,
+	            width 2s 3.4s ease-in-out,
+	            left 2s 3.4s ease-in-out,
+	            border-width 2s 3.4s ease-in-out,
+	            top 2s 3.4s ease-in-out,
+	            background-color .5s ease-in-out,
+	            -webkit-transform 2s 3.4s ease-in-out;
 }
 
 #first {
