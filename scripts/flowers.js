@@ -55,6 +55,18 @@
 		sun.classList.remove( 'spin' );
 	});
 
+	function forEach ( collection, func ) {
+		[].forEach.call( collection, func );
+	}
+
+	forEach( flowers, function( flower ) {
+		flower.addEventListener( 'click', function () {
+			toggleClass( flower, 'alive' );
+		});
+	});
+
+
+
 	window.addEventListener( 'keyup', function ( event ) {
 		var colour;
 		var key = event.which;
@@ -75,12 +87,12 @@
 			toggleClass( stems[ 2 ], 'alive' );
 		} else if ( key === keys.left ) {
 			colour = cycleColour( '+' );
-			[].forEach.call( flowers, function ( flower ) {
+			forEach( flowers, function ( flower ) {
 				flower.style.backgroundColor = colours[ colour ];
 			});
 		} else if ( key === keys.right ) {
 			colour = cycleColour( '-' );
-			[].forEach.call( flowers, function ( flower ) {
+			forEach( flowers, function ( flower ) {
 				flower.style.backgroundColor = colours[ colour ];
 			});
 		}
