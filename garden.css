@@ -40,7 +40,7 @@ body {
 	position: absolute;
 	left: 50%;
 	margin-left: -7.5px;
-	background: lime;
+	background: linear-gradient( to left, lime, limegreen );
 	border: 1px solid darkgreen;
 	border-bottom: none;
 	bottom: 10%;
@@ -48,6 +48,7 @@ body {
 	height: 20px;
 	transition: height 4.741s ease-in-out;
 }
+
 .stem.alive,
 .stem:active,
 .stem:hover {
@@ -55,9 +56,9 @@ body {
 }
 
 .flower {
-	box-shadow: none;
 	border-color: white;
 	border-width: 15px;
+	box-shadow: 0 0 1px black;
 	top: -30px;
 	left: -25px;
 	height: 30px;
