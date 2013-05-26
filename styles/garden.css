@@ -24,10 +24,11 @@ body {
 	box-sizing: content-box;
 	box-shadow: 0 0 1000px white, inset 0 0 50px rgba( 250, 100, 0, 0.3 );
 	cursor: pointer;
+	transform: translateZ( 0 );
 }
 
 .sun.spin {
-	transform: rotate( 360deg );
+	transform: translateZ( 0 ) rotate( 360deg );
 	transition: height .5s ease-in-out,
 	            width .5s ease-in-out,
 	            all 1s ease-in-out;
