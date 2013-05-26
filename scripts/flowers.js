@@ -59,9 +59,9 @@
 		[].forEach.call( collection, func );
 	}
 
-	forEach( flowers, function( flower ) {
-		flower.addEventListener( 'click', function () {
-			toggleClass( flower, 'alive' );
+	forEach( stems, function( stem ) {
+		stem.addEventListener( 'click', function () {
+			toggleClass( stem, 'alive' );
 		});
 	});
 

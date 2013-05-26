@@ -58,6 +58,7 @@ body {
 	width: 15px;
 	height: 20px;
 	transition: height 4.741s ease-in-out;
+	cursor: pointer;
 }
 
 .stem.alive,
